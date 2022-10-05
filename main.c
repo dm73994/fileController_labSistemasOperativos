@@ -11,9 +11,10 @@ int esDirectorio(char * path);
 int search(char*dir, char*pattern);
 
 int main(int argc, char*argv[]){
-    
-	int resp = search(argv[1], argv[2]);
-	printf("%d", resp);	
+   	printf("Primer arg: [%s]\n",argv[1]);
+        printf("Segundo arg: [%s\n]", argv[2]);	
+	//int resp = search(argv[1], argv[2]);
+	//printf("%d", resp);	
 
     exit(EXIT_SUCCESS);
 }
