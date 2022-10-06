@@ -77,10 +77,11 @@ int search(char*dir, char*pattern){
 	    strcpy(absPath, dir);
 	    strcat(absPath, "/");
 	    strcat(absPath, entry->d_name);	  
-	    
+	    //printf("%s",absPath);
 		//verificamos si el archivo cumple el patron
-	    if(strstr(entry->d_name, pattern) ){
-	    	total += 1;
+	  if(strstr(entry->d_name, pattern) ){
+			printf("%s\n",absPath);
+			total += 1;
 		}
 		
 		//buscamos recursivamente en los subdirectorios
