@@ -62,7 +62,7 @@ int search(char*dir, char*pattern){
 	
 	//**Verificar que el directorio sea valido
 	if(streamDir == NULL){
-		perror("opendir");
+		//perror("opendir");
 		return 0;
 	}
 	
@@ -72,7 +72,7 @@ int search(char*dir, char*pattern){
 	//**Leemos los archivos hasta que encontremos un null indicando que se han leido todos
 	while( (entry = readdir(streamDir) ) ){
 		//reservamos memoria dinamica para almacenar la ruta absoluta del archivo en lectura
-	    absPath = (char*)malloc(strln(dir) + strlen (entry->d_name)+2);
+	    absPath = (char*)malloc(strlen(dir) + strlen (entry->d_name)+2);
 	  
 	    strcpy(absPath, dir);
 	    strcat(absPath, "/");
